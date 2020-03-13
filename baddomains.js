@@ -154,7 +154,7 @@ function getAccountData() {
     var accountData = {};
     accountData.ids = [], acc = {};
     try {
-        var range = sheet.getRange("A2:F")
+        var range = sheet.getRange("A3:F")
     } catch (e) {
         throw new Error(args[1] + ' is not a valid range');
     }
@@ -179,7 +179,7 @@ function getAccountData() {
         });
     var data = range.getValues();
 
-    sheet.getRange("A2:H").getValues()
+    sheet.getRange("A3:H").getValues()
         //Filter invalid rows
         .filter(function(row) {
             return row[0];
@@ -226,14 +226,14 @@ function checkSettings(ids) {
 
         var subject = 'New Accounts Added to the Bad Domains Dashboard ' + new Date();
         var list = [];
-        list.push('Hey\n>');
-        list.push('The Campaign Labels need to be added for the following accounts :\n>');
+        list.push('Hey,\n>');
+        list.push('The following new accounts will be added to the list of accounts on which the script is run the next time :\n>');
         for (var i = 0; i < missingIds.length; i++) {
             list.push((i + 1) + '.' + missingIds[i][1] + '\n');
             SpreadsheetApp.openByUrl(BADSTRINGS_MCC_SPREADSHEET).getSheetByName(SETTINGS.ACCOUNTS_SHEET_NAME).appendRow(missingIds[i]);
         }
-        list.push('These accounts will be added to the list of accounts on which the script is run the next time.\n>');
-        list.push('If you want the List to be added to any campaign ,add the Label "BADDOMAINS" to the campaigns\n>');
+       
+        list.push('If you <strong>do not want</strong> the List to be added to any campaign ,add the Label "ws:bd" to the campaigns\n>');
         list.push('You can access the accounts from ' + BADSTRINGS_MCC_SPREADSHEET);
         if (RECIPIENT_EMAILS != "") MailApp.sendEmail(RECIPIENT_EMAILS, subject, list.join('\n'));
     }
@@ -285,7 +285,7 @@ function processAccount(details) {
     };
 
     var flag = spreadsheetData.flag;
-    var excludeValues = (spreadsheet.getSheetByName(SETTINGS.SETTINGS_SHEET_NAME).getRange("A2:A").getValues()).map(function(obj) {
+    var excludeValues = (spreadsheet.getSheetByName(SETTINGS.SETTINGS_SHEET_NAME).getRange("A3:A").getValues()).map(function(obj) {
         if (obj[0] && obj[0] != "") return obj[0];
     });
     excludeValues = removeDups(excludeValues);
