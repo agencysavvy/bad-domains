@@ -38,7 +38,7 @@
  *
  *  step 4. paste the new URL just below in variable BADSTRINGS_MCC_SPREADSHEET 
  */
-var BADSTRINGS_MCC_SPREADSHEET = "https://docs.google.com/spreadsheets/d/1umXNneTl2sjXQoMnKrFXG3x3bIu6L8kmRM78895Xxd0/edit#gid=1774357280";
+var BADSTRINGS_MCC_SPREADSHEET = "PASTE THE URL HERE";
 
 /* step 5.  Create a copy of this sheet (this is the sheet created for each individual account) 
  *          https://docs.google.com/spreadsheets/d/161nPkwcC2fe0hHEFh2a0yRzwOO7PK8Ey37zp5YIpx64/edit#gid=1810648742   
@@ -48,7 +48,7 @@ var BADSTRINGS_MCC_SPREADSHEET = "https://docs.google.com/spreadsheets/d/1umXNne
  *  step 6. paste the new URL below in variable BADSTRINGS_SPREADSHEET 
  */
 
-var BADSTRINGS_SPREADSHEET = "https://docs.google.com/spreadsheets/d/10EI28GdnfL4fVhZ_Jx9Ja2WKt3lX0K4GUxdSJ5T1QwY/edit#gid=1810648742";
+var BADSTRINGS_SPREADSHEET = "PASTE THE URL HERE";
 
 /*
  *  step 7. Change email below (variable RECIPIENT_EMAILS) with the email address where you would like to get notifications
