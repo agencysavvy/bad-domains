@@ -4,6 +4,10 @@
 
 # Bad Domains 
 
+### Video Instructions
+
+https://www.loom.com/share/313d33fbd2184f06974dc614f353523c
+
 ## WHAT
 
 The goal of this script is to identify and exclude domains based on strings you've defined as "bad" (such as .tk, asbestos, .rt etc.)
