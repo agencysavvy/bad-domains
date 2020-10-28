@@ -211,7 +211,7 @@ Also send a notification email
 function checkSettings(ids) {
 
     var missingIds = [];
-    var accountIterator = AdsManagerApp.accounts().withCondition("LabelNames CONTAINS " + CONFIG.ACCOUNT_LABEL).get();
+    var accountIterator = AdsManagerApp.accounts().withCondition('LabelNames CONTAINS "' + CONFIG.ACCOUNT_LABEL + '"').get();
     while (accountIterator.hasNext()) {
         var account = accountIterator.next();
         var customerId = account.getCustomerId();
